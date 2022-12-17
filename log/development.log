@@ -1233,3 +1233,26 @@ Processing by Api::V1::GreetingsController#index as */*
 Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 766)
 
 
+Started GET "/" for 127.0.0.1 at 2022-12-17 06:41:32 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ijeoma/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ijeoma/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.1ms | Allocations: 478)
+Completed 200 OK in 98ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 3322)
+
+
+Started GET "/" for 127.0.0.1 at 2022-12-17 06:43:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ijeoma/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ijeoma/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.0ms | Allocations: 477)
+Completed 200 OK in 91ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 3324)
+
+
+Started GET "/api/v1/greetings" for 127.0.0.1 at 2022-12-17 06:43:50 -0500
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (1.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:5:in `index'
+Completed 200 OK in 74ms (Views: 1.4ms | ActiveRecord: 47.9ms | Allocations: 6094)
+
+
